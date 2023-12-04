@@ -1,3 +1,3 @@
 #!/bin/bash
-# Get the response body for a given URL for 200 status code responses.
-curl -sL "$1"
+# cURL get body size
+curl -sI "$1" | grep -i Content-Length | awk '{print $2}'
